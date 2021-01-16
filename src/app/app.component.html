@@ -1,5 +1,22 @@
 <div class="container">
-  <h1 class="display-2">Hey Component</h1>
-  <app-icon></app-icon>
-</div>
+  <div class="row justify-content-center align-items-center">
+    <div class="col col-lg-6">
+      <div class="text-center">
+        <h1 [hidden] = "isCross" class="uppercase text-danger">
+          Player One Turn
+        </h1>
+        <h1 class="uppercase text-danger">
+          Player Two Turn
+        </h1>
+      </div>
 
+    </div>
+    <div class="col col-lg-6">
+      <h1 class="text-uppercase">Game Over {{winMessage}}</h1>
+      <button (click)="reloadGame()" class="btn btn-danger text-uppercase pl-5 pr-5">
+        Reload Game
+      </button>
+
+    </div>
+  </div>
+</div>
